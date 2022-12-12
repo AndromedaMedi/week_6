@@ -1,3 +1,8 @@
+
+// ** ONLY TO CONFIRM I WAS CORRECT AFTER PREDICTING OUTPUT AND EXPLAINING WHY ** //
+
+
+
 // const scenario = {
 //     murderer: 'Miss Scarlet',
 //     room: 'Library',
