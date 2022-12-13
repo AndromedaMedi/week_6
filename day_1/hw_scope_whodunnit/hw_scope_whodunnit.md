@@ -64,7 +64,7 @@ console.log('First Verdict: ', firstVerdict);
 const secondVerdict = `The murderer is ${murderer}.`;
 console.log('Second Verdict: ', secondVerdict);
 ```
-<!-- The output will be 'First Verdict: The murderer is Mrs. Peacock. Second Verdict: The murderer is Professor Plum.' because we are declaring a const function while changing the let variable murderer -->
+<!-- The output will be 'First Verdict: The murderer is Mrs. Peacock. Second Verdict: The murderer is Professor Plum.' because we are declaring a const function while changing the let variable murderer for that instance and using that to display the firstVerdict -->
 
 #### Episode 4
 
@@ -83,7 +83,7 @@ console.log(suspects);
 console.log(`Suspect three is ${suspectThree}.`);
 ```
 <!-- The first output will be the list of suspects with the change made for suspectThree 'The suspects are Miss Scorlet, Professor Plum, Colonel Mustard.' -->
-<!-- The second output will be 'Suspect three is Mrs. Peacock.' beacause the change to 'Colonel Mustard' was only made within the const function declareAllSuspects but did not reasign the variable suspectThree -->
+<!-- The second output will be 'Suspect three is Mrs. Peacock.' beacause the change to 'Colonel Mustard' was only made within the const function declareAllSuspects but did not reasign the variable suspectThree outside that block -->
 
 #### Episode 5
 
@@ -106,7 +106,7 @@ changeWeapon('Revolver');
 const verdict = declareWeapon();
 console.log(verdict);
 ```
-<!-- The output will be 'The weapon is the Revolver' because we have declared a function that allows for a change of the weapon -->
+<!-- The output will be 'The weapon is the Revolver' because we have declared a function that allows for a change of the weapon key -->
 
 #### Episode 6
 
@@ -162,7 +162,7 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
-<!-- The output will be 'The murderer is Mr. Green.' because the function declareMurder was declared as a const  when the murder was assigned to 'Mr. Green' and could not be changed to the following two names-->
+<!-- The output will be 'The murderer is Mr. Green.' because the function declareMurder was declared as a const when the murder was assigned to 'Mr. Green' and the following two instances of murderer are only accessed within the function block scope but not outside it -->
 
 #### Episode 8
 
@@ -202,7 +202,7 @@ changeScenario();
 const verdict = declareWeapon();
 console.log(verdict);
 ```
-<!-- The output will be 'The weapon is Candle Stick.' because given changeSenario the room was changed to 'Dining Room', given the room change the murder was changed to 'Colonel Mustard' and given the murder change the weapon was changed to 'Candle Stick' -->
+<!-- The output will be 'The weapon is Candle Stick.' because given changeSenario the room was changed to 'Dining Room', given the room change the murder was changed to 'Colonel Mustard' and given the murderer change the weapon was changed to 'Candle Stick' -->
 
 #### Episode 9
 
@@ -220,7 +220,7 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 ```
-<!-- The output will be 'The murderer is Professor Plum' ? -->
+<!-- The output will be 'The murderer is Professor Plum' because the change to Mrs. Peacock is only accessible within the block scope of the if statement -->
 
 ### Extensions
 
